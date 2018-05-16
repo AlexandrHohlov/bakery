@@ -1,0 +1,107 @@
+.tab-wrap {
+    padding: 40px 0;
+
+    @media screen and (max-width: 769px) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+}
+
+.tab {
+    float: right;
+    overflow: hidden;
+    width: 40%;
+
+    @media screen and (max-width: 769px) {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+.tabcontent-wrap {
+    float: left;
+    width: 60%;
+
+    @media screen and (max-width: 769px) {
+        float: none;
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
+.tab__items {
+    padding-top: 10px;
+}
+
+.tablinks {
+    position: relative;
+}
+
+.tablinks.active {
+    color: $color-red;
+
+    &:before {
+        content: '\2039';
+        top: 14px;
+        left: 0;
+        position: absolute;
+        font-size: 30px;
+        line-height: 30px;
+
+        @media screen and (max-width: 769px) {
+            content: none;
+        }
+    }
+
+}
+
+.tab li {
+    cursor: pointer;
+    padding: 20px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+    line-height: 22px;
+    border-top: 1px solid #d2cdc9;
+    transition: color .3s ease-in-out;
+
+    &:last-child {
+        border-bottom: 1px solid #d2cdc9;
+    }
+
+    &:active {
+        color: $color-red;
+    }
+
+    &:hover {
+        color: $color-red;
+    }
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 0 20px 0 0;
+}
+
+.tab__title {
+    font-size: 34px;
+    line-height: 36px;
+    margin-bottom: 22px;
+    font-family: 'proxima_nova_rgregular';
+    color: $color-blue;
+    font-weight: normal;
+}
+
+.tab__descr {
+    color: #5f5f5f;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    
+}

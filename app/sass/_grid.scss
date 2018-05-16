@@ -1,0 +1,108 @@
+.conteiner {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+
+    @media screen and (max-width: 1024px)  {
+        width: 720px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media screen and (max-width: 769px) {
+        width: 100%;
+    // }
+
+    // @media screen and (max-width: 450px) {
+    //     width: auto;
+       
+    }
+}
+
+// .row {
+//     position:relative;
+// }
+
+// .row_margin {
+//     margin:0 1.5%;
+// }
+
+// .row:after {
+//     content:'';
+//     display:table;
+//     width:100%;
+//     clear:both;
+// }
+
+// .column {
+//     float:left;
+//     margin:0 1.5%;
+//     position:relative;
+// }
+
+// .one_fourth,
+// .one_third,
+// .two_third,
+// .one_half,
+// .one_first {
+//     float:left;
+//     margin:0 1.5%;
+//     position:relative;
+// }
+
+// .one_fourth {
+//     width:22%;
+// }
+
+// .one_third {
+//     width:30.33%;
+// }
+
+// .two_third {
+//     width:63.66%;
+// }
+
+// .one_half {
+//     width:47%;
+// }
+
+// .one_first {
+//     width:97%;
+//     float:none;
+// }
+
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.column-wrap {
+    font-size: 0;
+    margin: 0 -1%;
+    width: 100%
+}
+
+.column-wrap > div {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1%;
+
+    @media screen and (max-width: 769px) {
+        width: 100%;
+    }
+}
+
+.column-4 {
+    width: 64.33%;
+}
+
+.column-2 {
+    width: 31.33%;
+}

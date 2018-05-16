@@ -1,0 +1,13 @@
+$color-blue: #4999af;
+$color-red: #f1715e;
+$white: #fff;
+$gray: #525252;
+$green: #668333;
+
+@mixin Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

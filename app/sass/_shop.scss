@@ -1,0 +1,62 @@
+.card__list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 27px;
+	padding-bottom: 10px;
+	
+	@media screen and (max-width: 1024px)  {
+	    justify-content: space-around;
+	}
+}
+// ----------------------------------------------- Card
+.card__item {
+	width: 320px;
+	margin-bottom: 17px;
+}
+
+.card__descr {
+	display: flex;
+    justify-content: space-between;
+    color: $white;
+    font-size: 17px;
+	line-height: 19px;
+	background-color: $color-red;
+}
+
+.card__title--link {
+	padding: 17px 15px;
+	color: $white;
+	transition: color .2s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		color: #000;
+	}
+}
+
+.card__price {
+	background-color: $color-blue;
+	padding: 16px 15px 17px;
+	z-index: 99;
+}
+
+.card__date {
+	width: 75px;
+	background-color: $green;
+	padding: 10px;
+	text-align: right;
+}
+
+.card__date--namber,
+.card__date--month {
+	color: $white;
+	display: block;
+	text-align: center;
+	font-size: 17px;
+	line-height: 19px;
+}
+
+.card__date--month {
+	text-transform: uppercase;
+}
