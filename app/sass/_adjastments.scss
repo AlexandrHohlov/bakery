@@ -64,3 +64,19 @@ img {
     height: auto;
     display: block;
 }
+
+.conteiner {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+
+    @media screen and (max-width: 1024px)  {
+        width: 720px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media screen and (max-width: 769px) {
+        width: 100%;
+    }
+}

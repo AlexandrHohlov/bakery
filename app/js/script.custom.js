@@ -12,10 +12,20 @@ $('.bg-black').click(function(){
   $('.bg-black').removeClass('active');    
 });
 
-// modal window
+
+
 
  $(function(){
+        // search
+       $("button").click(function(event){
+            $(".searchBar").animate({
+                width: 'toggle'
+                }, 500, function() {
+                  // animation complete
+            });
 
+        });
+        // modal window
         $('#submitForm').on('submit', function(e){
             e.preventDefault();
 
@@ -31,6 +41,19 @@ $('.bg-black').click(function(){
 
         });
 
+              $('#search').on('submit', function(e){
+            e.preventDefault();
+
+            var n = $(this).find('input[name="search__text"]').val();
+
+            var data = {
+                name: n
+            };
+
+            console.info(data);
+
+        });
+         
     });
 
  // tabs

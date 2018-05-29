@@ -46,7 +46,7 @@
 	font-size: 45px;
 	line-height: 49px;
 	font-family: 'proxima_novasemibold';
-	color: #fff;
+	color: $white;
 	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
 	padding-bottom: 17px;
 	padding-right: 16px;
@@ -55,7 +55,7 @@
 
 .preview__link {
 	position: relative;
-	color: #fff;
+	color: $white;
 	font-size: 16px;
 	padding: 13px 45px 13px 20px;
 	display: block;
@@ -65,7 +65,7 @@
 	position: absolute;
     text-align: center;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     width: 28px;
     height: 28px;
     line-height: 28px;

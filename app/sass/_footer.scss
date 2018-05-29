@@ -140,10 +140,14 @@
         margin: 10% auto;
         padding: 5px 20px 13px 20px;
         border-radius: 10px;
-        background: #fff;
-        background: -moz-linear-gradient(#fff, #999);
-        background: -webkit-linear-gradient(#fff, #999);
-        background: -o-linear-gradient(#fff, #999);
+        background: $white;
+        background: -moz-linear-gradient($white, #999);
+        background: -webkit-linear-gradient($white, #999);
+        background: -o-linear-gradient($white, #999);
+
+        @media screen and (max-width: 540px) {
+        	width: 280px
+        }
     }
 
     .modalDialog p {
@@ -158,7 +162,7 @@
 
     .close {
         background: #606061;
-        color: #FFFFFF;
+        color: $white;
         line-height: 25px;
         position: absolute;
         right: -12px;

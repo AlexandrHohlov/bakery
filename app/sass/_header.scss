@@ -1,14 +1,9 @@
-// .header {
-// 	position: absolute;
-// 	top: 0;
-
 .logo {
 
 	@media screen and (max-width: 1024px) {
         margin-right: 20px;
     }
 }
-
 
 
 .nav--active {
@@ -20,18 +15,25 @@
 .top-nav {
 	position: relative;
 	background-color: rgba(27, 127, 155, .6);
-	width: 307px;
-	margin: 0 -15px 26px 0;
+	// width: 307px;
+	margin: 0 -30px 26px 0;
+	display: flex;
+    justify-content: space-between;
 
 	&:after {
 		content: '';
 		position: absolute;
-		top: 5px;
+		top: 0;
 		bottom: 0;
 		right: 0;
 		width: 15px;
+		height: 100%;
 		background: rgba(27, 127, 155, .6);
 		transform: skew(-25deg) rotate(-25deg);
+	}
+
+	@media screen and (max-width: 769px) {
+		display: none;
 	}
 
 }
@@ -39,11 +41,6 @@
 .top-nav__list {
 	padding: 10px 45px 6px 10px;
 	display: flex;
-
-	@media screen and (max-width: 950px) {
-		display: none;
-	}
-
 }
 
 .top-nav__item {
@@ -58,7 +55,7 @@
 	    	bottom: 3px;
 	    	width: 1px;
 	    	height: 10px;
-	    	background: #fff;
+	    	background: $white
 	    }
 
     }
@@ -74,7 +71,7 @@
 	font-size: 13px;
 	line-height: 15px;
 	font-family: 'proxima_nova_rgregular';
-	color: #fff;
+	color: $white;
 	transition: color .2s ease-in-out;
 
 	&:hover {
@@ -82,37 +79,69 @@
 	}
 
 }
-
-.top-nav__search-wrap {
-	position: absolute;
-	top: 8px;
-	right: 20px;
+// ----------------------------------search-----------------------
+.search {
+	display: flex;
+	justify-content: flex-end;
 }
 
-.top-nav__search input {
+.searchBar {
 	display: none;
+	margin: 0 50px 2px 0;
+	background: none;
+	border-bottom: 1px solid white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	height: 27px;
+	color: $white;
 }
 
-.top-nav__search--inner {
-	width: 0;
+.searchBar:focus {
+	outline: none;
+	border-bottom: 3px solid white;
+}
+
+::-webkit-input-placeholder {
+	color: $white;
+	font-family: 'proxima_nova_rgregular';
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: $white;
+	font-family: 'proxima_nova_rgregular';
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: $white;
+	font-family: 'proxima_nova_rgregular';
+}
+
+:-ms-input-placeholder {
+	color: Swhite;
+	font-family: 'proxima_nova_rgregular';
+}
+
+.search__btn {
+	width: 30px;
+	height: 30px;
+	background: none;
 	border: none;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	color: $white;
+}
+
+.search__btn:focus {
 	outline: none;
 }
 
-.top-nav__search--icon {
-	background-color: transparent;
-	font-size: 13px;
-	color: #fff;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	transition: color .2s ease-in-out;
-
-	&:hover {
-		color: $color-red;
-	}
+.fa {
+	font-size: 1em;
 }
-
 //------------------------------------ top nav and
 
 .nav__list {
@@ -148,32 +177,9 @@
 
 .nav__link--active {
 	color: #4999af;
+	text-transform: uppercase;
 }
 
-// ------------------------------------------------Title section
-.title-section {
-	background-size: cover;
-	padding: 250px 0 50px;
-	background-image: url(../img/slider.jpg);
-	background-repeat: no-repeat;
-    height: 100%;
-    background-position: bottom;
-
-	h2 {
-		font-size: 34px;
-		font-family: 'proxima_nova_rgbold';
-		text-transform: capitalize;
-		background:rgba(27, 127, 155, 0.8);
-		padding: 15px 15px 10px 15px;
-		color: #fff;
-		display: inline-block;
-		min-width: 320px;
-
-		@media screen and (max-width: 769px) {
-			min-width: 250px;
-		}
-	}
-}
 // --------------------------------------------------------
 header {
 	background: transparent;
@@ -188,8 +194,9 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 15px;
-    background-color: #fff;
+    background-color: $white;
 }
+
 /*menu*/
 nav.menu {
 	text-align: right;
@@ -247,7 +254,7 @@ nav.menu li a:hover::after, nav.menu li a.active::after {
 	}
 
 	nav.mobile-menu {
-		background-color: #fff;
+		background-color: $white;
 	    padding: 15px;
 	    width: 60%;
 	    height: 100vh;
@@ -302,4 +309,29 @@ nav.menu li a:hover::after, nav.menu li a.active::after {
 		height: 1000px;
 	}
 
+}
+
+// ------------------------------------------------Title section
+.title-section {
+	background-size: cover;
+	padding: 250px 0 50px;
+	background-image: url(../img/slider.jpg);
+	background-repeat: no-repeat;
+    height: 100%;
+    background-position: bottom;
+
+	h2 {
+		font-size: 34px;
+		font-family: 'proxima_nova_rgbold';
+		text-transform: capitalize;
+		background:rgba(27, 127, 155, 0.8);
+		padding: 15px 15px 10px 15px;
+		color: $white;
+		display: inline-block;
+		min-width: 320px;
+
+		@media screen and (max-width: 769px) {
+			min-width: 250px;
+		}
+	}
 }
