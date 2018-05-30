@@ -2800,6 +2800,9 @@ nav.menu li a:hover::after, nav.menu li a.active::after {
   .tab li:hover {
     color: #f1715e; }
 
+.tabcontent.open {
+  display: block; }
+
 .tabcontent {
   display: none;
   padding: 0 20px 0 0; }
