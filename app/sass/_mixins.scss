@@ -1,18 +1,16 @@
-$color-blue: #4999af;
-$color-red: #f1715e;
+$color-title: #4999af;
+$color-subtitle: #f1715e;
 $white: #fff;
 $gray: #525252;
 $green: #668333;
 
-@mixin Content {
+@mixin flexCenter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-$headHeight: 50px;
-$searchHeight: 30px;
-$searchButtonWidth: 30px;
-$searchInputWidth: 200px;
-$searchBgColor: #eee;
+@mixin size($width, $height: auto) {
+    width: $width;
+    height: $height;
+}

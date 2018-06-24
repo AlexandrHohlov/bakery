@@ -1,0 +1,81 @@
+.hero {
+	background:url('../img/header-hero.jpg') center center no-repeat;
+	background-size:cover;
+	padding: 270px 0 210px 0;
+
+	@media screen and (max-width: 769px) {
+        padding: 170px 0 110px 0;
+    }
+}
+
+.hero__description {
+	width: 980px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 1024px) {
+        width: 769px;
+    }
+
+    @media screen and (max-width: 769px) {
+        width: 90%;
+    }
+}
+
+.hero__title {
+	font-size: 92px;
+	line-height: 96px;
+	font-family: "PlayfairDisplayBold";
+	text-align: center;
+	margin: 0 0 120px 0;
+	color: $white;
+
+	@media screen and (max-width: 1024px) {
+        font-size: 62px;
+		line-height: 66px;
+    }
+
+    @media screen and (max-width: 769px) {
+		margin-bottom: 60px;
+	}
+}
+
+.hero__title--decsr {
+	font-family: "proxima_nova_rgregular";
+	font-size: 24px;
+	line-height: 36px;
+	text-align: center;
+	color: $white;
+	margin: 0 0 65px 0;
+	
+	@media screen and (max-width: 1024px) {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	@media screen and (max-width: 769px) {
+		margin-bottom: 35px;
+	}
+}
+
+.hero__btn {
+	display: block;
+	width: 196px;
+	font-family: "AlegreyaBold";
+	font-size: 14px;
+	line-height: 24px;
+	padding: 15px 10px;
+	background-color: rgba(86, 83, 76, 0.52);
+	border: 1px dashed rgb(158, 156, 147);
+	color: $white;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 auto;
+	transition: background-color .3s ease-in-out;
+	
+
+	&:hover {
+		background-color: rgba(86, 83, 76, 1);
+		color: $white;
+	}
+}
+

@@ -1,0 +1,258 @@
+.breakfast {
+	background:url('../img/Breakfast.jpg') center center no-repeat;
+	background-size:cover;
+	padding-top: 84px;
+    padding-bottom: 70px;
+    color: #fff;
+    // outline: 1px dashed #56534c;
+    // outline-offset: -10px;
+}
+
+.breakfast__wrap {
+	display: flex;
+	justify-content: space-between;
+
+	@media screen and (max-width: 1024px) {
+	    flex-flow: column wrap;
+	    justify-content: center;
+	}
+}
+
+.breakfast__prise {
+	font-family: "AlegreyaBold";
+	text-align: center;
+	flex-grow: 1;
+	
+	@media screen and (max-width: 1024px) {
+		padding-bottom: 50px;
+		display: flex;
+	    flex-flow: row wrap;
+	    flex-direction: row wrap;
+	    justify-content: center;
+	}
+}
+
+.breakfast__prise--title {
+	font-size: 60px;
+	line-height: 66px;
+	color: $white;
+
+	@media screen and (max-width: 1024px) {
+		width: 100%;
+	}
+
+	.breakfast__prise--subtitle {
+		display: block;
+		font-size: 16px;
+		line-height: 20px;
+		color: #c8a593;
+		margin-bottom: 60px;
+
+		@media screen and (max-width: 769px) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.breakfast__card {
+	padding: 0 10px;
+	&:not(:last-child) {
+		margin-bottom: 50px;
+	}
+}
+
+.breakfast__card--title {
+	font-size: 30px;
+	line-height: 36px;
+	color: $white;
+}
+
+.breakfast__card--subtitle {
+	display: block;
+	font-size: 16px;
+	line-height: 20px;
+	color: #c2beba;
+	margin-bottom: 50px;
+}
+
+.breakfast__card--prise {
+	display: block;
+	font-size: 36px;
+	line-height: 40px;
+	color: #dfc691;
+}
+// -----------------------breakfast__menu--------------------------
+.breakfast__menu {
+	position: relative;
+	background: url('../img/Coloss.png') bottom right no-repeat #f3f1e9;
+	margin-right: 26px;
+	@media screen and (max-width: 1024px) {
+		display: flex;
+	    justify-content: center;
+
+	}
+    &:after,&:before {
+    	content: '';
+    	display: block;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		top: 10px;
+    	position: absolute;
+    	z-index: 1;
+    }
+    &:after {
+    	background: url(../img/border-top.png) left top repeat-x, url(../img/border-top.png) left bottom repeat-x;
+    }
+    &:before {
+    	background: url(../img/border-left.png) left top repeat-y, url(../img/border-left.png) right top repeat-y;
+    }
+    .menu-bg {
+    	&:after,&:before {
+	    	content: '';
+	    	border-top: 10px solid #d9d6c7;
+	    	border-bottom: 10px solid #d9d6c7;
+	    	display: block;
+			bottom: 26px;
+			top: 26px;
+			right: -13px;
+	    	position: absolute;
+	    	z-index: 1;
+	    	width: 13px;
+	    	box-shadow: 5px 0 10px -5px rgba(0, 0, 0, 0.2);
+    	}
+    	&:after {		
+    		background: url(../img/menu-bg1.gif) left top repeat-y;
+    	}
+    	&:before {
+    		top: 50px;
+    		bottom: 50px;
+			right: -26px;	
+    		background: url(../img/menu-bg1.gif) left top repeat-y;
+    	}
+    }
+}
+
+.breakfast__menu--inner {
+    padding: 10px 35px; /* Поля */
+    width: 440px;
+    color: #56534c;
+    text-align: center;
+    font-family: "AlegreyaBold";
+    position: relative;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%, 0 90%);
+	
+	@media screen and (max-width: 769px) {
+		width: 100%;
+	}
+
+}
+
+.breakfast__menu--head {
+	position: relative;
+	padding: 40px 0px 0px 0px;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.breakfast__menu--border {
+	position: relative;
+	padding: 0px;
+	margin-bottom: 70px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	&:after {
+	        content: '';
+	        position: absolute;
+	        height: 1px;
+	        top: 50%;
+	        background: #c2beba;
+	        left: 0px;
+	        right: 0px;
+	}
+
+	.breakfast__menu--top-img {
+		display: inline-block;
+        border: 1px solid #c2beba;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: url(../img/pretzel.png) center center no-repeat #f3f1e9;
+        z-index: 1;
+
+
+		&:before, &:after {
+			width: 11px;
+			height: 11px;
+	        content: '';
+	        position: absolute;
+	        border-radius: 10px;
+	        top: 50%;
+	        border: 1px solid #c2beba;
+	        background: #f3f1e9;
+	        transform: translateY(-50%);
+	    }
+	    &:before {
+	        left: 0px;
+	    }
+	    
+	    &:after {
+	        right: 0px;
+	    }
+  	}
+}
+
+
+.breakfast__menu--title {
+	font-size: 44px;
+	line-height: 50px;
+	padding: 0 10px;
+	margin: 0 0 30px 0;
+
+	@media screen and (max-width: 769px) {
+		font-size: 30px;
+	    line-height: 39px;
+	    padding: 0px 10px;
+	    margin: 0 0 30px 0;
+	}
+}
+
+.breakfast__menu--descr {
+	font-family: "proxima_nova_rgregular";
+	font-size: 14px;
+	line-height: 30px;
+	padding: 0 11px;
+	margin: 0 0 40px 0;
+
+	@media screen and (max-width: 769px) {
+		font-size: 13px;
+	    line-height: 20px;
+	    padding: 0px 10px;
+	    margin: 0 0 25px 0;
+	}
+}
+
+.breakfast__menu--link {
+	display: inline-block;
+	font-size: 18px;
+	line-height: 20px;
+	padding: 14px 70px;
+	color: #a47d5e;
+	text-transform: uppercase;
+	border: 1px solid rgb(158, 156, 147);
+	margin: 0 0 53px 0;
+
+	@media screen and (max-width: 769px) {
+		font-size: 16px;
+	    line-height: 20px;
+	    padding: 8px 30px;
+	    margin: 0 0 30px 0;
+	}
+}

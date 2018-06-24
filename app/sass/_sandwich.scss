@@ -1,0 +1,198 @@
+.sandwich {
+	background: url(../img/Mill_small.png) top center no-repeat;
+	padding-top: 90px;
+	padding-bottom: 110px;
+}
+
+.sandwich__title {
+	font-family: "AlegreyaBold";
+	font-size: 48px;
+	line-height: 50px;
+	color: #56534c;
+	margin: 0 0 6px 0;
+	text-align: center;
+}
+
+.sandwich__subtitle--wrap {
+	text-align: center;
+}
+
+.sandwich__subtitle {
+	display: inline-block;
+	font-family: "AlegreyaBold";
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: uppercase;
+	color:#a47d5e;
+
+	@media screen and (max-width: 1024px) {
+		margin-bottom: 30px;
+	}
+}
+
+.sandwich__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+	}
+}
+
+.sandwich__ingredients {
+	@media screen and (max-width: 1024px) {
+		display: flex;
+	    flex-flow: row wrap;
+	    justify-content: center;
+	    margin-bottom: 50px;
+	}
+
+	@media screen and (max-width: 769px) {
+		margin-bottom: 150px;
+	}
+}
+
+
+.sandwich__ingredients--card {
+	text-align: center;
+
+	&:not(:last-child) {
+		margin-bottom: 50px;
+	}
+}
+
+.sandwich__ingredients--img img {
+	border-radius: 50%;
+	margin-bottom: 20px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.sandwich__ingredients--title {
+	font-family: "AlegreyaBold";
+	font-size: 30px;
+	line-height: 34px;
+	color:#a47d5e;
+	margin: 0 0 20px 0;
+}
+
+.sandwich__ingredients--descr {
+	font-family: "proxima_nova_rgregular";
+	font-size: 14px;
+	line-height: 20px;
+	color:#56534c;
+	width: 300px;
+	margin: 0;
+}
+
+// -------------------------------sandwich__card------------------------------------
+
+.sandwich__card--inner {
+	position: relative;
+}
+
+.sandwich__card--img img {
+	display: inline-block;
+	border: 10px solid $white;
+}
+
+.sandwich__card--ready {
+	position: absolute;
+	top: -20px;
+	right: 10px;
+	display: flex;
+	flex-flow: column nowrap;
+
+	@media screen and (max-width: 769px) {
+		width: 100%;
+		top: -100px;
+		flex-flow: row nowrap;
+		left: 50%;
+	    height: 150px;
+	    transform: translateX(-50%);
+	}
+}
+
+.ready__constituents {
+	font-family: "AlegreyaBold";
+	text-align: center;
+	background-color: rgba(255,255,255,.8);
+	width: 200px;
+	height: 200px;
+	padding: 25px 20px 30px 20px;
+
+	@media screen and (max-width: 769px) {
+		.ready__title {
+			font-size: 16px;
+		}
+	}
+
+	.ready__time {
+		display: block;
+		font-size: 60px;
+		line-height: 66px;
+		color:  #56534c;
+
+		@media screen and (max-width: 769px) {
+			font-size: 40px;
+	    	line-height: 46px;
+		}
+	}
+
+	&:last-child {
+		background: url(../img/Ready_in_bg.jpg) center no-repeat;
+		
+		.ready__time {
+		    font-size: 92px;
+		    line-height: 100px;
+		    color: #dfc691;
+
+		    @media screen and (max-width: 769px) {
+				font-size: 62px;
+		    	line-height: 70px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		width: 150px;
+		height: 150px;
+		padding: 15px 10px 15px 10px;
+	}
+}
+
+.sandwich__card--link {
+	position: absolute;
+	bottom: -17px;
+	left: -20px;
+	display: inline-block;
+	font-family: "AlegreyaBold";
+	font-size: 14px;
+	line-height: 24px;
+	padding: 18px 30px;
+	background-color: $white;
+	border-top: 1px dashed rgb(158, 156, 147);
+	border-right: 1px dashed rgb(158, 156, 147);
+	border-bottom: 1px dashed transparent;
+	border-left: 1px dashed transparent;
+	color: #dfc691;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 auto;
+	transition: color, border .3s ease-in-out;
+	
+
+	&:hover {
+		color: rgba(86, 83, 76, 1);
+		border-bottom: 1px dashed rgb(158, 156, 147);
+		border-left: 1px dashed rgb(158, 156, 147);
+	}
+	
+	@media screen and (max-width: 769px) {
+	    left: 50%;
+	    transform: translateX(-50%);
+	    padding: 7px 10px
+	}
+
+}

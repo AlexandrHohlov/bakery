@@ -18,6 +18,7 @@ body {
     flex-flow: column nowrap;
     font-family: 'proxima_nova_rgregular', 'FontAwesome', sans-serif;
     font-size: 16px;
+    background-color: #f3f1e9;
 
     @media screen and (max-width: 1024px) {
         justify-content: center;
@@ -37,7 +38,6 @@ body {
 h2,
 h3,
 h4 {
-    text-transform: uppercase;
     margin: 0;
 }
 
@@ -53,6 +53,11 @@ ul {
 
 a {
     text-decoration: none;
+    transition: color .3s linear;
+
+    &:hover {
+        color: #f00;
+    }
 }
 
 figure {
@@ -66,17 +71,20 @@ img {
 }
 
 .conteiner {
-    width: 1000px;
+    width: 1260px;
     margin: 0 auto;
     position: relative;
 
+    @media screen and (max-width: 1300px)  {
+        width: 1024px;
+    }
+
     @media screen and (max-width: 1024px)  {
-        width: 720px;
-        padding-left: 20px;
-        padding-right: 20px;
+        width: 769px;
     }
 
     @media screen and (max-width: 769px) {
         width: 100%;
+        padding: 0 20px;
     }
 }
