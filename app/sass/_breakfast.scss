@@ -4,8 +4,6 @@
 	padding-top: 84px;
     padding-bottom: 70px;
     color: #fff;
-    // outline: 1px dashed #56534c;
-    // outline-offset: -10px;
 }
 
 .breakfast__wrap {
@@ -136,7 +134,7 @@
 .breakfast__menu--inner {
     padding: 10px 35px; /* Поля */
     width: 440px;
-    color: #56534c;
+    color: $color-title;
     text-align: center;
     font-family: "AlegreyaBold";
     position: relative;
@@ -181,16 +179,14 @@
 	.breakfast__menu--top-img {
 		display: inline-block;
         border: 1px solid #c2beba;
-        width: 60px;
-        height: 60px;
+        @include size(60px, 60px)
         border-radius: 50%;
         background: url(../img/pretzel.png) center center no-repeat #f3f1e9;
         z-index: 1;
 
 
 		&:before, &:after {
-			width: 11px;
-			height: 11px;
+			@include size(11px, 11px)
 	        content: '';
 	        position: absolute;
 	        border-radius: 10px;
@@ -244,7 +240,7 @@
 	font-size: 18px;
 	line-height: 20px;
 	padding: 14px 70px;
-	color: #a47d5e;
+	color: $color-subtitle;
 	text-transform: uppercase;
 	border: 1px solid rgb(158, 156, 147);
 	margin: 0 0 53px 0;

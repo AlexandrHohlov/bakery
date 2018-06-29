@@ -30,20 +30,21 @@
 }
 
 .pancakes__card--img {
-	position: relative;
+
 	img {
 		height: 100%;
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%, 0 90%);
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%, 0 90%);
 	}
 	
-	&:after {
+	&:before {
 		position: absolute;
+		@include size(20px, 20px);
 		bottom: 0;
 		left: 0;
 		border: 20px solid transparent;
-		border-top: 20px solid green;
-		border-right: 20px solid green;
+		border-top: 20px solid $white;
+		border-right: 20px solid $white;
 	}
 
 	@media screen and (max-width: 769px) {
@@ -70,16 +71,23 @@
 }
 
 .pancakes__title {
+	position: relative;
 	font-family: "AlegreyaBold";
 	font-size: 48px;
 	line-height: 50px;
-	color: #56534c;
+	color: $color-title;
 	margin: 0 0 6px 0;
 	padding-right: 150px;
 
 	@media screen and (max-width: 769px) {
 		font-size: 36px;
 		line-height: 40px;
+	}
+
+	@media screen and (max-width: 540px) {
+	    font-size: 30px;
+	    line-height: 30px;
+	    padding-right: 100px;
 	}
 }
 
@@ -89,7 +97,7 @@
 	font-size: 14px;
 	line-height: 16px;
 	text-transform: uppercase;
-	color:#a47d5e;
+	color:$color-subtitle;
 	margin: 0 0 65px 0;
 
 	@media screen and (max-width: 769px) {
@@ -101,7 +109,7 @@
 	font-family: "proxima_nova_rgregular";
 	font-size: 14px;
 	line-height: 24px;
-	color: #56534c;
+	color: $color-title;
 	margin-bottom: 100px;
 	width: 410px;
 	letter-spacing: 1px;
@@ -115,8 +123,7 @@
 .ready {
 	position: absolute;
 	font-family: "AlegreyaBold";
-	width: 200px;
-	height: 200px;
+	@include size(200px, 200px);
 	top: -40px;
 	right: -100px;
 	background: url(../img/Ready_in_bg.jpg) center no-repeat;
@@ -125,17 +132,21 @@
 	box-shadow: 0px 24px 54px 0px rgba(105,80,58,.45);
 
 	@media screen and (max-width: 1300px)  {
-		width: 150px;
-		height: 150px;
+		@include size(150px, 150px);
 		padding: 15px 10px 17px 10px;
 		right: 0;
+	}
+
+	@media screen and (max-width: 540px) {
+		@include size(13px, 130px);
+		padding: 15px 10px 17px 10px;
 	}
 
 		.ready__title {
 		font-size: 18px;
 		line-height: 20px;
 		text-transform: uppercase;
-		color:#a47d5e;
+		color:$color-subtitle;
 		margin: 0 0 30px 0;
 
 			@media screen and (max-width: 1300px)  {
@@ -174,15 +185,13 @@
 // ------------------------------------slider---------------------------------------
 #slider {
 	img {
-		width: 100px;
-		height: 100px;
+		@include size(100px, 100px);
 		object-fit: cover;
 		display: inline-block;
 		border-radius: 50%;
 
 		@media screen and (max-width: 769px) {
-			width: 60px;
-			height: 60px;
+			@include size(60px, 60px);
 		}
 
 		&:not(:last-child) {
@@ -206,6 +215,11 @@
 		width: 260px;
 		text-align: center;
 	}
+
+	@media screen and (max-width: 540px) {
+		width: 174px;
+	}
+
 }
 
 .owl-carousel .owl-stage-outer {
@@ -218,8 +232,7 @@
 
 .owl-theme .owl-nav [class*='owl-'] {
     font-size: 20px;
-    height: 32px;
-    width: 32px;
+    @include size(32px, 32px);
     border: 1px solid rgb(216, 187, 163);
     border-radius: 50%;
     display: inline-block;

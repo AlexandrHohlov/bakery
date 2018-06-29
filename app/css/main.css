@@ -2380,6 +2380,9 @@ body {
       -ms-flex: 1 0;
           flex: 1 0; }
 
+.maincontent {
+  position: relative; }
+
 .title {
   font-size: 0; }
 
@@ -2426,6 +2429,28 @@ img {
     .conteiner {
       width: 100%;
       padding: 0 20px; } }
+
+.bread {
+  position: absolute;
+  top: -55px;
+  right: 50%;
+  background: url(../img/Bread_border.png) center center no-repeat;
+  z-index: 99;
+  width: 108px;
+  overflow: auto;
+  margin: auto;
+  left: 0;
+  right: 0; }
+  .bread .bread__inner {
+    background: #fff;
+    height: 80px;
+    width: 80px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    padding: 15px;
+    margin: 13px; }
+    .bread .bread__inner img {
+      display: inline-block; }
 
 .header {
   background-color: rgba(86, 83, 76, 0.53);
@@ -2660,7 +2685,185 @@ img {
   background: url("../img/ArtOfCakes.jpg") center center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
-  height: 760px; }
+  padding: 90px 0;
+  margin-top: 10px;
+  position: relative; }
+
+.cakes__wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media screen and (max-width: 769px) {
+    .cakes__wrap {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.cakes__card {
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50%; }
+  @media screen and (max-width: 769px) {
+    .cakes__card {
+      width: 100%;
+      margin-bottom: 40px; } }
+
+.cakes__title {
+  font-size: 48px;
+  line-height: 50px;
+  margin: 0;
+  color: #56534c; }
+
+.cakes__subtitle {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: "AlegreyaBold";
+  text-transform: uppercase;
+  color: #a47d5e;
+  margin: 0 0 56px 0; }
+
+.cakes__descr {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+  color: #56534c;
+  padding: 0 20px; }
+
+.chef__card {
+  padding: 35px 55px 10px 55px; }
+  @media screen and (max-width: 540px) {
+    .chef__card {
+      padding: 35px 15px 10px 15px; } }
+  .chef__card .chef__title {
+    font-size: 24px;
+    line-height: 30px;
+    font-family: "AlegreyaBold";
+    margin: 0 0 40px 0;
+    color: #56534c; }
+  .chef__card .chef__profile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 30px; }
+    .chef__card .chef__profile .chef__profile--img {
+      -webkit-flex-basis: 100px;
+          -ms-flex-preferred-size: 100px;
+              flex-basis: 100px; }
+    .chef__card .chef__profile .chef__profile--img img {
+      display: inline-block;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      margin: 0 10px; }
+    .chef__card .chef__profile span {
+      font-size: 24px;
+      line-height: 30px;
+      font-family: "AlegreyaRegular";
+      padding: 20px 15px;
+      border-top: 1px solid #d7d5ca;
+      color: #56534c;
+      display: inline-block;
+      margin-top: 20px; }
+      .chef__card .chef__profile span:first-child {
+        text-align: left; }
+      .chef__card .chef__profile span:last-child {
+        text-align: right; }
+  .chef__card blockquote {
+    position: relative;
+    display: inline-block;
+    font-family: "ScriptinaRegular";
+    font-size: 24px;
+    line-height: 30px;
+    color: #a47d5e;
+    width: 270px;
+    margin: 0; }
+    @media screen and (max-width: 769px) {
+      .chef__card blockquote {
+        width: 100%; } }
+    .chef__card blockquote:before, .chef__card blockquote:after {
+      position: absolute;
+      font-family: "TimesNewRomanRegular";
+      color: rgba(86, 83, 76, 0.5);
+      font-size: 60px; }
+    .chef__card blockquote:before {
+      content: '\201C';
+      top: 0;
+      left: -20px; }
+      .chef__card blockquote:before:after {
+        content: '\201D';
+        bottom: 0;
+        right: 0; }
+
+.cakes__product {
+  position: relative;
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center; }
+  @media screen and (max-width: 769px) {
+    .cakes__product {
+      width: 100%; } }
+  .cakes__product .cakes__products--descr {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url(../img/Tastes_bg.png) center center no-repeat;
+    opacity: .9; }
+  .cakes__product .cakes__products--title {
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: "AlegreyaRegular";
+    color: #c9b176;
+    text-transform: uppercase;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 9; }
+  .cakes__product .cakes__products--first-line figure,
+  .cakes__product .cakes__products--second-line figure {
+    width: 100%;
+    outline: 5px solid #fff;
+    outline-offset: -10px; }
+    .cakes__product .cakes__products--first-line figure:first-child,
+    .cakes__product .cakes__products--second-line figure:first-child {
+      margin-bottom: 20px; }
+  .cakes__product .cakes__products--first-line {
+    margin-right: 20px; }
 
 .pancakes {
   background: url("../img/Pancakes_bg.jpg") center center no-repeat;
@@ -2703,33 +2906,35 @@ img {
           -ms-flex-direction: column;
               flex-direction: column; } }
 
-.pancakes__card--img {
-  position: relative; }
-  .pancakes__card--img img {
-    height: 100%;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%, 0 90%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%, 0 90%); }
-  .pancakes__card--img:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border: 20px solid transparent;
-    border-top: 20px solid green;
-    border-right: 20px solid green; }
-  @media screen and (max-width: 769px) {
-    .pancakes__card--img {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
-          -ms-flex-order: 2;
-              order: 2; } }
+.pancakes__card--img img {
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%, 0 90%); }
+
+.pancakes__card--img:before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  border: 20px solid transparent;
+  border-top: 20px solid #fff;
+  border-right: 20px solid #fff; }
+
+@media screen and (max-width: 769px) {
+  .pancakes__card--img {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; } }
 
 .pancakes__card--descr {
   position: relative;
@@ -2744,6 +2949,7 @@ img {
       padding: 30px 30px 24px 30px; } }
 
 .pancakes__title {
+  position: relative;
   font-family: "AlegreyaBold";
   font-size: 48px;
   line-height: 50px;
@@ -2754,6 +2960,11 @@ img {
     .pancakes__title {
       font-size: 36px;
       line-height: 40px; } }
+  @media screen and (max-width: 540px) {
+    .pancakes__title {
+      font-size: 30px;
+      line-height: 30px;
+      padding-right: 100px; } }
 
 .pancakes__subtitle {
   display: block;
@@ -2798,6 +3009,11 @@ img {
       height: 150px;
       padding: 15px 10px 17px 10px;
       right: 0; } }
+  @media screen and (max-width: 540px) {
+    .ready {
+      width: 13px;
+      height: 130px;
+      padding: 15px 10px 17px 10px; } }
   .ready .ready__title {
     font-size: 18px;
     line-height: 20px;
@@ -2856,6 +3072,9 @@ img {
     .pancakes__slider {
       width: 260px;
       text-align: center; } }
+  @media screen and (max-width: 540px) {
+    .pancakes__slider {
+      width: 174px; } }
 
 .owl-carousel .owl-stage-outer {
   margin-left: 20px; }
@@ -2865,8 +3084,8 @@ img {
 
 .owl-theme .owl-nav [class*='owl-'] {
   font-size: 20px;
-  height: 32px;
   width: 32px;
+  height: 32px;
   border: 1px solid #d8bba3;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -3358,10 +3577,7 @@ img {
   line-height: 24px;
   padding: 18px 30px;
   background-color: #fff;
-  border-top: 1px dashed #9e9c93;
-  border-right: 1px dashed #9e9c93;
-  border-bottom: 1px dashed transparent;
-  border-left: 1px dashed transparent;
+  border: 1px dashed #9e9c93;
   color: #dfc691;
   text-transform: uppercase;
   text-align: center;
@@ -3370,9 +3586,7 @@ img {
   -o-transition: color, border .3s ease-in-out;
   transition: color, border .3s ease-in-out; }
   .sandwich__card--link:hover {
-    color: #56534c;
-    border-bottom: 1px dashed #9e9c93;
-    border-left: 1px dashed #9e9c93; }
+    color: #56534c; }
   @media screen and (max-width: 769px) {
     .sandwich__card--link {
       left: 50%;
@@ -3383,9 +3597,6 @@ img {
 
 .footer {
   margin-bottom: 70px; }
-  @media screen and (max-width: 440px) {
-    .footer {
-      margin-bottom: 30px; } }
 
 .footer__inner {
   display: -webkit-box;

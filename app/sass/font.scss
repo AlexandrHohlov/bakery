@@ -61,4 +61,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "TimesNewRomanRegular";
+    src: url("../fonts/TimesNewRomanRegular/TimesNewRomanRegular.eot");
+    src: url("../fonts/TimesNewRomanRegular/TimesNewRomanRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/TimesNewRomanRegular/TimesNewRomanRegular.woff") format("woff"),
+    url("../fonts/TimesNewRomanRegular/TimesNewRomanRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 

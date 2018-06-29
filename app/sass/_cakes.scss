@@ -1,5 +1,200 @@
 .cakes {
 	background:url('../img/ArtOfCakes.jpg') center center no-repeat;
 	background-size:cover;
-	height: 760px;
+	padding: 90px 0;
+	margin-top: 10px;
+	position: relative;
 }
+
+.cakes__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: 769px) {
+		flex-direction: column;
+	}
+
+}
+
+.cakes__card {
+	text-align: center;
+	flex-grow:1;
+	width: 50%;
+
+	@media screen and (max-width: 769px) {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+}
+
+.cakes__title {
+	font-size: 48px;
+	line-height: 50px;
+	margin: 0;
+	color: $color-title;
+}
+
+.cakes__subtitle {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 30px;
+	font-family: "AlegreyaBold";
+	text-transform: uppercase;
+	color: $color-subtitle;
+	margin: 0 0 56px 0;
+}
+
+
+.cakes__descr {
+	font-size: 14px;
+	line-height: 24px;
+	margin: 0;
+	color: $color-title;
+	padding: 0 20px;
+}
+
+.chef__card {
+	padding: 35px 55px 10px 55px;
+
+	@media screen and (max-width: 540px) {
+			padding: 35px 15px 10px 15px;
+		}
+
+	
+	.chef__title {
+		font-size: 24px;
+		line-height: 30px;
+		font-family: "AlegreyaBold";
+		margin: 0 0 40px 0;
+		color: $color-title;
+	}
+
+	.chef__profile {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+
+		.chef__profile--img {
+			flex-basis: 100px;
+		}
+
+		.chef__profile--img img {
+			display: inline-block;
+			border-radius: 50%;
+			margin: 0 10px;
+		}
+
+		span {
+			font-size: 24px;
+			line-height: 30px;
+			font-family: "AlegreyaRegular";
+			padding: 20px 15px;
+			border-top: 1px solid #d7d5ca;
+			color: $color-title;
+			display: inline-block;
+			margin-top: 20px;
+
+			&:first-child {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+
+
+	blockquote {
+		position: relative;
+		display: inline-block;
+		font-family: "ScriptinaRegular";
+		font-size: 24px;
+		line-height: 30px;
+		color: $color-subtitle;
+		width: 270px;
+		margin: 0;
+
+		@media screen and (max-width: 769px) {
+			width: 100%;
+		}
+
+			&:before, &:after {
+				position: absolute;
+				font-family: "TimesNewRomanRegular";
+				color: rgba(86,83,76,.5);
+				font-size: 60px;
+			}
+
+			&:before {
+				content: '\201C';
+				top: 0;
+				left: -20px;
+
+			&:after {
+				content: '\201D';
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+}
+
+.cakes__product {
+	position: relative;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	flex-grow:1;
+	text-align: center;
+
+	@media screen and (max-width: 769px) {
+			width: 100%;
+		}
+
+	.cakes__products--descr {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: url(../img/Tastes_bg.png) center center no-repeat;
+		opacity: .9;
+	}
+
+	.cakes__products--title {
+			position: absolute;
+			display: inline-block;
+			width: 150px;
+			font-size: 30px;
+			line-height: 36px;
+			font-family: "AlegreyaRegular";
+			color: #c9b176;
+			text-transform: uppercase;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 9;
+		}
+
+	.cakes__products--first-line,
+	.cakes__products--second-line {
+		figure {
+			width: 100%;
+			outline: 5px solid $white;
+   			outline-offset: -10px;
+
+   			&:first-child {
+   				margin-bottom: 20px;
+   			}
+		}
+
+	}
+
+	.cakes__products--first-line {
+		margin-right: 20px;
+	}
+
+	
+}
+

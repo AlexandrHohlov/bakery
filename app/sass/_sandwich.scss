@@ -8,7 +8,7 @@
 	font-family: "AlegreyaBold";
 	font-size: 48px;
 	line-height: 50px;
-	color: #56534c;
+	color: $color-title;
 	margin: 0 0 6px 0;
 	text-align: center;
 }
@@ -23,7 +23,7 @@
 	font-size: 14px;
 	line-height: 16px;
 	text-transform: uppercase;
-	color:#a47d5e;
+	color:$color-subtitle;
 
 	@media screen and (max-width: 1024px) {
 		margin-bottom: 30px;
@@ -73,7 +73,7 @@
 	font-family: "AlegreyaBold";
 	font-size: 30px;
 	line-height: 34px;
-	color:#a47d5e;
+	color:$color-subtitle;
 	margin: 0 0 20px 0;
 }
 
@@ -81,7 +81,7 @@
 	font-family: "proxima_nova_rgregular";
 	font-size: 14px;
 	line-height: 20px;
-	color:#56534c;
+	color:$color-title;
 	width: 300px;
 	margin: 0;
 }
@@ -118,8 +118,7 @@
 	font-family: "AlegreyaBold";
 	text-align: center;
 	background-color: rgba(255,255,255,.8);
-	width: 200px;
-	height: 200px;
+	@include size(200px, 200px);
 	padding: 25px 20px 30px 20px;
 
 	@media screen and (max-width: 769px) {
@@ -132,7 +131,7 @@
 		display: block;
 		font-size: 60px;
 		line-height: 66px;
-		color:  #56534c;
+		color:  $color-title;
 
 		@media screen and (max-width: 769px) {
 			font-size: 40px;
@@ -156,8 +155,7 @@
 	}
 
 	@media screen and (max-width: 769px) {
-		width: 150px;
-		height: 150px;
+		@include size(150px, 150px);
 		padding: 15px 10px 15px 10px;
 	}
 }
@@ -172,10 +170,7 @@
 	line-height: 24px;
 	padding: 18px 30px;
 	background-color: $white;
-	border-top: 1px dashed rgb(158, 156, 147);
-	border-right: 1px dashed rgb(158, 156, 147);
-	border-bottom: 1px dashed transparent;
-	border-left: 1px dashed transparent;
+	border: 1px dashed rgb(158, 156, 147);
 	color: #dfc691;
 	text-transform: uppercase;
 	text-align: center;
@@ -185,8 +180,6 @@
 
 	&:hover {
 		color: rgba(86, 83, 76, 1);
-		border-bottom: 1px dashed rgb(158, 156, 147);
-		border-left: 1px dashed rgb(158, 156, 147);
 	}
 	
 	@media screen and (max-width: 769px) {
